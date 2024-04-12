@@ -6,6 +6,8 @@ import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-co
 import { makeExecutableSchema } from "@graphql-tools/schema";
 import mongoose from "mongoose";
 import cors from "cors";
+import { resolvers } from "./resolvers";
+import { typeDefs } from "./typeDefs";
 
 dotenv.config();
 
@@ -26,15 +28,12 @@ mongoose
 
 const startSever = async () => {
   const app = express();
+  app.use(cors());
 
-  const typeDefs = `#graphql
-    type Query{
-      name:String
-    }
-  `;
-
-  const resolvers = {};
-  const schema = makeExecutableSchema({ typeDefs, resolvers });
+  const schema = makeExecutableSchema({
+    typeDefs: typeDefs,
+    resolvers: resolvers,
+  });
 
   const apolloServer = new ApolloServer({
     schema,
@@ -44,11 +43,6 @@ const startSever = async () => {
   await apolloServer.start();
 
   apolloServer.applyMiddleware({ app, cors: false });
-
-  // Enable req.body data
-  app.use(express.json());
-
-  app.use(cors());
 
   app.listen(PORT, () =>
     console.log(
