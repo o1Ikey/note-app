@@ -25,7 +25,6 @@ function AuthProvider({ children }: { children: ReactNode }) {
         setUser(user);
         if (user.accessToken !== localStorage.getItem("accessToken")) {
           localStorage.setItem("accessToken", user.accessToken);
-          window.location.reload();
         }
         setIsLoading(false);
         return;
