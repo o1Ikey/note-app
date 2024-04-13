@@ -1,8 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Outlet, RouteObject, createBrowserRouter } from "react-router-dom";
 import Login from "../pages/Login";
 import AuthProvider from "../context/AuthProvider";
 import ProtectedRoute from "./ProtectedRoute";
 import ErrorPage from "../pages/ErrorPage";
+import NoteList from "../components/NoteList";
 import Home from "../pages/Home";
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -29,6 +31,12 @@ const routes: RouteObject[] = [
           {
             element: <Home />,
             path: "/",
+            children: [
+              {
+                element: <NoteList />,
+                path: `folders/:folderId`,
+              },
+            ],
           },
         ],
       },
