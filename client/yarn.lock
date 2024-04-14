@@ -1255,6 +1255,21 @@
   dependencies:
     "@babel/types" "^7.20.7"
 
+"@types/draft-js@*":
+  version "0.11.18"
+  resolved "https://registry.yarnpkg.com/@types/draft-js/-/draft-js-0.11.18.tgz#f2cad2178987fdd444827a2f7809a653f82a70ad"
+  integrity sha512-lP6yJ+EKv5tcG1dflWgDKeezdwBa8wJ7KkiNrrHqXuXhl/VGes1SKjEfKHDZqOz19KQbrAhFvNhDPWwnQXYZGQ==
+  dependencies:
+    "@types/react" "*"
+    immutable "~3.7.4"
+
+"@types/draftjs-to-html@^0.8.4":
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/@types/draftjs-to-html/-/draftjs-to-html-0.8.4.tgz#b25ce6145973c431369ec011e75bebf9c78d533e"
+  integrity sha512-5FZcjFoJL57N/IttLCTCNI0krX+181oCl5hf76u3TqPkqBAphHrJAO9ReYesx9138kcObaYmpnWC2Yrqxoqd2Q==
+  dependencies:
+    "@types/draft-js" "*"
+
 "@types/estree@1.0.5":
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-1.0.5.tgz#a6ce3e556e00fd9895dd872dd172ad0d4bd687f4"
@@ -1287,6 +1302,14 @@
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.2.24.tgz#8dda8f449ae436a7a6e91efed8035d4ab03ff759"
   integrity sha512-cN6upcKd8zkGy4HU9F1+/s98Hrp6D4MOcippK4PoE8OZRngohHZpbJn1GsaDLz87MqvHNoT13nHvNqM9ocRHZg==
   dependencies:
+    "@types/react" "*"
+
+"@types/react-draft-wysiwyg@^1.13.8":
+  version "1.13.8"
+  resolved "https://registry.yarnpkg.com/@types/react-draft-wysiwyg/-/react-draft-wysiwyg-1.13.8.tgz#8549922468340dd6f820615a033dc6b34f3c317a"
+  integrity sha512-qo0vIHjqAYq3Hz93Td3ecNodgVjKsvrWkBJ6mZXJSUmQzrQ5Fu7NS9oV5PXnVbnuqPoJLALbCSiz8UCksLribg==
+  dependencies:
+    "@types/draft-js" "*"
     "@types/react" "*"
 
 "@types/react-transition-group@^4.4.10":

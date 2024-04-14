@@ -4,6 +4,7 @@ import { RouterProvider } from "react-router-dom";
 import router from "./router";
 import "./firebase/config";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import "../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
 const client = new ApolloClient({
   uri: import.meta.env.VITE_PUBLIC_GRAPHQL_URI,

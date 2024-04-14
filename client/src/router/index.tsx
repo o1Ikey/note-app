@@ -6,6 +6,7 @@ import ProtectedRoute from "./ProtectedRoute";
 import ErrorPage from "../pages/ErrorPage";
 import NoteList from "../components/NoteList";
 import Home from "../pages/Home";
+import Note from "../components/Note";
 
 // eslint-disable-next-line react-refresh/only-export-components
 const AuthLayout = () => {
@@ -35,6 +36,12 @@ const routes: RouteObject[] = [
               {
                 element: <NoteList />,
                 path: `folders/:folderId`,
+                children: [
+                  {
+                    element: <Note />,
+                    path: `note/:noteId`,
+                  },
+                ],
               },
             ],
           },

@@ -24,12 +24,13 @@ function Home() {
           height: "50vh",
           boxShadow: "0 0 15px 0 rgb(193 193 193 / 60%)",
           overflow: "hidden",
+          flexWrap: "nowrap",
         }}
       >
         <Grid item xs={3} sx={{ height: "100%" }}>
           <FolderList />
         </Grid>
-        <Grid item xs={9} sx={{ height: "100%" }}>
+        <Grid item xs={9} sx={{ height: "100%", marginLeft: "20px" }}>
           <Outlet />
         </Grid>
       </Grid>
